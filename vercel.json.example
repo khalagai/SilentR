@@ -1,0 +1,26 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "handle": "filesystem"
+        }
+    ],
+    "env": {
+        "NODE_ENV": "production",
+        "PORT": "8001",
+        "MONGO_URI": "YOUR_MONGODB_URI",
+        "REDIS_URL": "YOUR_REDIS_URL",
+        "JWT_SECRET": "YOUR_JWT_SECRET",
+        "FRONTEND_URL": "YOUR_FRONTEND_URL",
+        "HUGGINGFACE_API_KEY": "YOUR_HUGGINGFACE_API_KEY",
+        "RATE_LIMIT_WINDOW_MS": "900000",
+        "RATE_LIMIT_MAX_REQUESTS": "100",
+        "LOG_LEVEL": "info"
+    }
+} 
